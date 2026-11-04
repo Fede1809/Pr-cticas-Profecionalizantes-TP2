@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de estilo | Galería Pigmento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Todo el estilo vive en un archivo CSS aparte -->
+  <link rel="stylesheet" href="guia-estilo.css">
+</head>
+<body>
+
+  <header class="portada">
+    <h1>Galería Pigmento</h1>
+    <p>Guía de estilo de una galería de arte digital: colores, tipografía y componentes.</p>
+  </header>
+
+  <main class="contenido">
+
+    <section>
+      <h2>Paleta de colores</h2>
+      <p>Cinco pigmentos: tres para marcar, dos para el fondo y el texto.</p>
+      <ul class="paleta">
+        <li><span class="muestra" style="background:#1f3a93"></span><strong>Ultramar</strong> #1F3A93 · color principal</li>
+        <li><span class="muestra" style="background:#c8872b"></span><strong>Ocre</strong> #C8872B · foco y acentos</li>
+        <li><span class="muestra" style="background:#b3243b"></span><strong>Carmín</strong> #B3243B · hover y alertas</li>
+        <li><span class="muestra" style="background:#f6f1e7;border:1px solid #cfc6b4"></span><strong>Marfil</strong> #F6F1E7 · fondo</li>
+        <li><span class="muestra" style="background:#26221f"></span><strong>Carbón</strong> #26221F · texto</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tipografía</h2>
+      <p class="demo-titulo">DM Serif Display: títulos</p>
+      <p>Work Sans: texto corrido, formularios y botones. Se lee bien en pantallas chicas y mantiene un contraste alto sobre el marfil.</p>
+      <h3>Título de nivel 3</h3>
+      <p class="chico">Texto pequeño para notas al pie y aclaraciones.</p>
+    </section>
+
+    <section>
+      <h2>Botones 3D</h2>
+      <p>Tienen "espesor": al pasar el mouse bajan un poco y al presionarlos se hunden del todo.</p>
+      <div class="fila">
+        <button class="btn-3d">Principal</button>
+        <button class="btn-3d btn-ocre">Secundario</button>
+        <button class="btn-3d btn-carmin">Importante</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Campos de formulario</h2>
+      <p>El campo con foco se resalta con un borde ocre grueso y un halo suave. Probalo con el mouse o con la tecla Tab.</p>
+      <form class="formulario" onsubmit="return false">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+        <label for="obra">Obra que te interesa</label>
+        <select id="obra">
+          <option>Óleo</option><option>Acuarela</option><option>Grabado</option>
+        </select>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="3" placeholder="Contanos qué buscás"></textarea>
+      </form>
+    </section>
+
+    <section>
+      <h2>Enlaces animados</h2>
+      <p>Al pasar el mouse, el enlace cambia de ultramar a carmín y el subrayado crece de izquierda a derecha.
+        Probalo con <a href="#" class="enlace">este enlace</a> o con <a href="#" class="enlace">este otro</a>.</p>
+    </section>
+
+    <section>
+      <h2>Acordeón de textos</h2>
+      <!-- details/summary: acordeón con HTML5 puro. El atributo name hace que se abra uno solo a la vez -->
+      <div class="acordeon">
+        <details name="faq" open>
+          <summary>¿Qué es la Galería Pigmento?</summary>
+          <p>Es un espacio digital donde se exhiben obras de artistas locales organizadas por técnica.</p>
+        </details>
+        <details name="faq">
+          <summary>¿Cómo se eligen los colores?</summary>
+          <p>Salen de pigmentos clásicos de la pintura: ultramar, ocre y carmín, sobre un fondo marfil de papel.</p>
+        </details>
+        <details name="faq">
+          <summary>¿Puedo reutilizar esta guía?</summary>
+          <p>Sí. Alcanza con copiar el archivo CSS y usar las mismas clases en otras páginas.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">Federico Calafiore · Práctica Profesional I · <a href="https://github.com/Fede1809" class="enlace">GitHub</a></footer>
+</body>
+</html>
